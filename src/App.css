@@ -1,0 +1,208 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Noto+Sans+JP:wght@500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500&display=swap');
+/* ::::::::::::::::::: Globals ::::::::::::::::::::: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--BgColor);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.btn-primary {
+  margin: 1rem auto;
+  text-align: center;
+  background: transparent;
+  border: 2px solid var(--MainColor);
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  transition: var(--MainTransition);
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: var(--MainColor);
+}
+.section {
+  max-width: 100vw;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.section-center {
+  max-width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-title {
+  text-align: center;
+  color: var(--MainColor);
+  font-family: var(--TitleFont);
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+/* End Globals */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+:root {
+  /* Colors */
+  --BgColor: #fdfdfd;
+  --MainColor: #8b0000;
+  --Gray1Color: #373534;
+  --Gray2Color: rgb(31, 31, 31);
+  --BlueColor: #2d3142;
+  --CtaColor: #9efca1;
+  /* Fonts */
+  --TitleFont: 'Noto Serif', serif;
+  --TextsFont: 'Quicksand', sans-serif;
+  --CtaFonts: 'Noto Sans JP', sans-serif;
+  --LogoFont: 'Dancing Script', cursive;
+  /* Others */
+  --MainTransition: 0.3s ease all;
+}
+/* End Variables */
+
+/* ::::::::::::::::::: Header ::::::::::::::::::::: */
+.header {
+  width: 100vw;
+  background: var(--BgColor);
+}
+.logo-container {
+  width: 85vw;
+  padding-top: 0.7rem;
+  height: 3.5rem;
+  margin: 0 auto;
+  color: var(--MainColor);
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--LogoFont);
+  letter-spacing: 2px;
+}
+/* End Header */
+
+/* ::::::::::::::::::: Navbar ::::::::::::::::::::: */
+.mobile-navbar {
+  width: 100%;
+  background-color: var(--BgColor);
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--MainColor);
+}
+.dd-btn {
+  color: var(--MainColor);
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-left: 1.2rem;
+  transition: var(--MainTransition);
+}
+.dd-btn:hover {
+  transform: scale(1.2);
+}
+.mobile-searchbox {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+.search-box {
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  padding: 0.4rem 0;
+  background-color: #8b000020;
+}
+.searchbox-icon {
+  position: absolute;
+  right: 2.3rem;
+  top: 50%;
+  transform: translateY(-60%);
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.searchbox-icon:hover {
+  margin-right: 0.3rem;
+}
+.mobile-bag {
+  color: var(--MainColor);
+  font-size: 1.5rem;
+  margin-right: 1.2rem;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.mobile-bag:hover {
+  transform: scale(1.2);
+}
+/* End Navbar */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
