@@ -424,7 +424,6 @@ a {
   color: var(--MainColor);
   font-family: var(--TitleFont);
   font-weight: 500;
-  margin-bottom: 0.3rem;
 }
 .product-price {
   color: var(--Gray1Color);
