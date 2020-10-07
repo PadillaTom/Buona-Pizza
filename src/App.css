@@ -392,7 +392,7 @@ a {
 /* Single Product Component */
 .single-product {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
   margin: 0 auto;
   width: 20rem;
   height: 30em;
