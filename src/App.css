@@ -414,10 +414,11 @@ a {
   transform: scale(1.05);
 }
 .product-info {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
-  padding-bottom: 2rem;
 }
 .product-title {
   font-size: 1.7rem;
