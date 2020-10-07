@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProductCard = ({ title, description, imageUrl, price, page }) => {
+const ProductCard = ({ key, title, description, imageUrl, price, page }) => {
   // Main:
   return (
     <article className='single-product'>

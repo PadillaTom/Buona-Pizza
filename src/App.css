@@ -400,6 +400,7 @@ a {
   border-radius: 0.7rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.22);
   transition: var(--MainTransition);
+  overflow: hidden;
 }
 .product-img {
   width: 100%;
