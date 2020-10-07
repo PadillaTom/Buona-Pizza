@@ -391,8 +391,10 @@ a {
 
 /* Single Product Component */
 .single-product {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   width: 20rem;
   height: 30em;
