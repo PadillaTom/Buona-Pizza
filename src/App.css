@@ -402,9 +402,12 @@ a {
   transition: var(--MainTransition);
   overflow: hidden;
 }
+.img-container-firebase {
+  width: 100%;
+}
 .product-img {
   width: 100%;
-  height: 50%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   border-top-left-radius: 0.7rem;

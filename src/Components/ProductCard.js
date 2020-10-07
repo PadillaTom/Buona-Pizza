@@ -5,7 +5,9 @@ const ProductCard = ({ key, title, description, imageUrl, price, page }) => {
   // Main:
   return (
     <article className='single-product'>
-      <img src={imageUrl} alt={page} className='product-img' />
+      <div className='img-container-firebase'>
+        <img src={imageUrl} alt={page} className='product-img' />
+      </div>
       <div className='product-info'>
         <h2 className='product-title'>{title}</h2>
         <p className='product-price'>
