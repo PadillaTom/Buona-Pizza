@@ -26,9 +26,9 @@ const Menu = () => {
           <h2>Our Menu</h2>
         </div>
         <div className='products-container'>
-          {pizze.map(({ id, page, title, price, description, imageUrl }) => (
+          {pizze.map(({ page, title, price, description, imageUrl }) => (
             <ProductCard
-              key={id}
+              key={page}
               id={page}
               title={title}
               price={price}
