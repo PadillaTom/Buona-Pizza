@@ -8,7 +8,7 @@ const Banner = () => {
         <div className='banner-info'>
           <h2>La vera pizza Italiana!</h2>
           <br />
-          <Link to='/products' className='btn-primary btn-banner'>
+          <Link to='/menu' className='btn-primary btn-banner'>
             Menu
           </Link>
         </div>
