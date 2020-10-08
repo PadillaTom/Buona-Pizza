@@ -22,7 +22,7 @@ const Cart = () => {
         {cart.map((item) => {
           return <CartItem key={item.id} {...item}></CartItem>;
         })}
-        <h2>total: $ {total}</h2>
+        <h2 className='cart-page-total'>total: $ {total}</h2>
         {user ? (
           <Link to='/checkout' className='btn-primary btn-checkout'>
             Checkout
