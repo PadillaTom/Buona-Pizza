@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import MenuProvider from './Context/MenuContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <MenuProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </MenuProvider>,
   document.getElementById('root')
 );
 

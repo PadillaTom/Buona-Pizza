@@ -1,22 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import ProductCard from '../Components/ProductCard';
-import db from '../firebase';
-
+import { MenuContext } from '../Context/MenuContext';
 // Products llevan PROPS!
 
 const Menu = () => {
-  // State:
-  const [pizze, setPizze] = useState([]);
-
-  // useEffect to fetch Pizzas:
-  // 1) Collection --> Menu
-  // 2) DOCS --> Each Pizza
-  // 3) DATA --> Pizza Info
-  useEffect(() => {
-    db.collection('menu').onSnapshot((snapshot) => {
-      setPizze(snapshot.docs.map((doc) => doc.data()));
-    });
-  }, []);
+  // USE CONTEXT ----->
+  const { pizze } = useContext(MenuContext);
 
   // Main:
   return (
@@ -26,18 +15,9 @@ const Menu = () => {
           <h2>Our Menu</h2>
         </div>
         <div className='products-container'>
-          {pizze.map(({ page, title, price, description, imageUrl }) => (
-            <ProductCard
-              key={page}
-              id={page}
-              title={title}
-              price={price}
-              description={description}
-              imageUrl={imageUrl}
-            ></ProductCard>
+          {pizze.map((pizza) => (
+            <ProductCard key={pizza.page} {...pizza}></ProductCard>
           ))}
-
-          {/* Capresse */}
         </div>
       </div>
     </section>

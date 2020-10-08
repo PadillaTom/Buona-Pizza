@@ -61,7 +61,7 @@ a {
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 :root {
   /* Colors */
-  --BgColor: #fdfdfd;
+  --BgColor: #fafafa;
   --MainColor: #8b0000;
   --Gray1Color: #373534;
   --Gray2Color: rgb(31, 31, 31);
@@ -80,7 +80,7 @@ a {
 /* ::::::::::::::::::: Header ::::::::::::::::::::: */
 .header {
   width: 100vw;
-  background: var(--BgColor);
+  background: white;
 }
 .logo-container {
   width: 85%;
@@ -98,7 +98,7 @@ a {
 /* ::::::::::::::::::: Navbar ::::::::::::::::::::: */
 .mobile-navbar {
   width: 100%;
-  background-color: var(--BgColor);
+  background-color: white;
   height: 3rem;
   display: flex;
   flex-direction: row;
@@ -185,6 +185,12 @@ a {
 }
 /* End Mobile Navbar */
 
+/* ::::::::::::::::::: Home-Section ::::::::::::::::::::: */
+.home-sect {
+  background: var(--BgColor);
+  max-width: 100vw;
+}
+/* End Home */
 /* ::::::::::::::::::: Banner-Section ::::::::::::::::::::: */
 .banner-section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -196,7 +202,7 @@ a {
 }
 .banner-info {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
@@ -205,7 +211,6 @@ a {
   color: white;
   font-family: var(--TitleFont);
   letter-spacing: 1.3px;
-  margin-bottom: 2rem;
 }
 .btn-banner {
   color: white;
@@ -331,14 +336,15 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem auto;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 }
 .single-discount {
   width: 95%;
+  margin: 0 auto;
   text-align: center;
   height: 15rem;
   text-align: center;
-  margin: 0 auto;
   border: 1px solid var(--Gray1Color);
   position: relative;
 }
@@ -438,11 +444,116 @@ a {
 }
 /* End Product Card */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Promo Products ::::::::::::::::::::: */
+.promo-title {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: var(--MainColor);
+  font-family: var(--LogoFont);
+  letter-spacing: 2px;
+}
+.promo-container {
+  width: 90vw;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.promo-card {
+  width: 100%;
+  height: 12rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.248);
+}
+.promo-img-container {
+  position: relative;
+  width: 100%;
+  height: 8rem;
+  flex: 0;
+}
+.promo-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.promo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.promo-cart-icon {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.7rem;
+  font-size: 1.3rem;
+  color: white;
+  z-index: 2;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.promo-cart-icon:hover {
+  transform: scale(1.5);
+}
+.promo-info {
+  text-align: start;
+  margin: 0.5rem 1rem;
+}
+.promo-pizza-title {
+  font-size: 0.8rem;
+  color: var(--BlueColor);
+}
+.promo-price {
+  margin-top: 0.3rem;
+  color: #ff2828;
+  font-weight: bold;
+  font-family: var(--TitleFont);
+}
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* End Promo Products */
+
+/* ::::::::::::::::::: Product Details ::::::::::::::::::::: */
+.desc-section {
+  min-height: 65vh;
+}
+.img-desc-container {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.description-img {
+  width: 80%;
+  height: 15rem;
+  object-fit: cover;
+  border: 3px solid var(--MainColor);
+  border-radius: 2rem;
+}
+.description-info {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--Gray1Color);
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+.description-price {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--MainColor);
+}
+.btn-desc {
+  display: block;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* End Product Details*/
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
