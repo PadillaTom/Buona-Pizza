@@ -5,7 +5,7 @@ const CartContext = React.createContext();
 
 function CartProvider({ children }) {
   //State:
-  const [cart, SetCart] = React.useState(localcart);
+  const [cart, setCart] = React.useState(localcart);
   const [total, setTotal] = React.useState(0);
   const [cartItems, setCartItems] = React.useState(0);
 
