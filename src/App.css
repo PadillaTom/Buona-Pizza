@@ -394,13 +394,13 @@ a {
   justify-content: space-around;
   align-items: center;
 }
-
-/* Single Product Component */
+/* Product Card Component*/
 .single-product {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   margin: 0 auto;
   width: 20rem;
   height: 30em;
@@ -410,13 +410,24 @@ a {
   overflow: hidden;
   margin-bottom: 2rem;
 }
-
 .product-img {
   width: 100%;
   height: 60%;
   object-fit: cover;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
+}
+.single-prod-cart {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  color: white;
+  background: #ff2828;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: var(--MainTransition);
 }
 .single-product:hover {
   transform: scale(1.05);
@@ -555,11 +566,41 @@ a {
 
 /* End Product Details*/
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Empty Cart ::::::::::::::::::::: */
+.empty-sect {
+  min-height: 76vh;
+}
+.empty-container {
+  text-align: center;
+  padding-top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.btn-empty {
+  margin: 2rem auto;
+  text-align: center;
+}
+.btn-empty:hover {
+  background: var(--MainColor);
+  color: white;
+}
+/* End Empty Cart */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Cart Page ::::::::::::::::::::: */
+.cart-sect {
+  min-height: 70vh;
+  text-align: center;
+}
+.btn-checkout {
+  margin: 2rem auto;
+  text-align: center;
+}
+.btn-checkout:hover {
+  background: var(--MainColor);
+  color: white;
+}
+/* End Cart Page */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */

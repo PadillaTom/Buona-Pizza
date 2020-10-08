@@ -33,7 +33,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to='/login' className='dd-single-item'>
+            <Link to='/cart' className='dd-single-item'>
               Cart
             </Link>
           </li>

@@ -7,6 +7,7 @@ import About from './Pages/about';
 import Error from './Pages/error';
 import Menu from './Pages/menu';
 import ProductDetails from './Pages/productDetails';
+import Cart from './Pages/cart';
 // Components
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -29,6 +30,9 @@ function App() {
           path='/menu/:id'
           children={<ProductDetails></ProductDetails>}
         ></Route>
+        <Route path='/cart'>
+          <Cart></Cart>
+        </Route>
         <Route path='*'>
           <Error></Error>
         </Route>
