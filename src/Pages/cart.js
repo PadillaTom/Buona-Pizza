@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../Context/CartContext';
 import EmptyCart from '../Components/EmptyCart';
 import CartItem from '../Components/CartItem';
+// Context:
+import { useStateValue } from '../Context/CartContext';
 
+// Main:
 const Cart = () => {
   let user = false;
   // Context:
-  const { cart, total } = React.useContext(CartContext);
+  const [{ basket }] = useStateValue();
 
-  // Empty Cart?:
-  if (cart.length === 0) {
+  //Empty Cart?:
+  if (basket.length === 0) {
     return <EmptyCart></EmptyCart>;
   }
   return (
@@ -19,10 +21,10 @@ const Cart = () => {
         <div className='section-title'>
           <h2>Your Cart</h2>
         </div>
-        {cart.map((item) => {
-          return <CartItem key={item.id} {...item}></CartItem>;
+        {basket.map((item) => {
+          return <CartItem key={item.page} {...item}></CartItem>;
         })}
-        <h2 className='cart-page-total'>total: $ {total}</h2>
+        <h2 className='cart-page-total'>total: $ {basket.length}</h2>
         {user ? (
           <Link to='/checkout' className='btn-primary btn-checkout'>
             Checkout

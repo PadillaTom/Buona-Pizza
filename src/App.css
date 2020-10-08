@@ -108,7 +108,7 @@ a {
 }
 .dd-btn {
   color: var(--MainColor);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   cursor: pointer;
   margin-left: 1.2rem;
   transition: var(--MainTransition);
@@ -144,13 +144,23 @@ a {
 }
 .mobile-bag {
   color: var(--MainColor);
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-right: 1.2rem;
   cursor: pointer;
   transition: var(--MainTransition);
+  position: relative;
 }
 .mobile-bag:hover {
   transform: scale(1.2);
+}
+.nav-amount-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
 }
 /* DD Menu */
 .dd-menu {
@@ -183,6 +193,15 @@ a {
   width: 95%;
   margin: 0 auto;
 }
+.dd-amount-container {
+  display: flex;
+  align-items: baseline;
+}
+.dd-amount-number {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
 /* End Mobile Navbar */
 
 /* ::::::::::::::::::: Home-Section ::::::::::::::::::::: */

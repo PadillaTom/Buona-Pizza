@@ -1,9 +1,8 @@
 import React from 'react';
 import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
-import { CartContext } from '../Context/CartContext';
 
 // Main:
-const CartItem = ({ id, image, title, price, amount }) => {
+const CartItem = ({ image, title, price, amount }) => {
   //Context:
 
   // Main:

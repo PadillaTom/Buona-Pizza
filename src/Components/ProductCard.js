@@ -1,7 +1,25 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { useStateValue } from '../Context/CartContext';
+
+// Main:
 const ProductCard = ({ title, imageUrl, price, page }) => {
+  // Add to cart:
+  const [{ basket }, dispatch] = useStateValue();
+  console.log(basket);
+  const addToBasket = () => {
+    dispatch({
+      type: 'ADD_BASKET',
+      item: {
+        title,
+        imageUrl,
+        price,
+        page,
+      },
+    });
+  };
+
   const history = useHistory();
   // Main:
   return (
@@ -10,6 +28,7 @@ const ProductCard = ({ title, imageUrl, price, page }) => {
       <AiOutlineShoppingCart
         className='single-prod-cart'
         onClick={() => {
+          addToBasket();
           history.push('/cart');
         }}
       ></AiOutlineShoppingCart>

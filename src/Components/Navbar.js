@@ -1,14 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 // Icons:
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import { BsBagFill } from 'react-icons/bs';
 import { FcSearch } from 'react-icons/fc';
+// Context:
+import { useStateValue } from '../Context/CartContext';
+
+// Main:
 const Navbar = () => {
+  // Cart Context:
+  const [{ basket }] = useStateValue();
+
   // Show DropDown:
   const [isOpen, setIsOpen] = React.useState(false);
-
   // Main:
   return (
     <React.Fragment>
@@ -23,6 +28,7 @@ const Navbar = () => {
         </div>
         <div className='mobile-bag'>
           <BsBagFill></BsBagFill>
+          <p className='nav-amount-number'>{basket?.length}</p>
         </div>
       </nav>
       <div className={isOpen ? `dd-menu show-dd` : `dd-menu`}>
@@ -32,10 +38,11 @@ const Navbar = () => {
               Login
             </Link>
           </li>
-          <li>
+          <li className='dd-amount-container'>
             <Link to='/cart' className='dd-single-item'>
-              Cart
+              Cart:
             </Link>
+            <p className='dd-amount-number'>{basket?.length}</p>
           </li>
         </ul>
         <div className='dd-menu-division'></div>
