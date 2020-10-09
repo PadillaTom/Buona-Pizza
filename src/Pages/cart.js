@@ -8,11 +8,17 @@ import { useStateValue } from '../Context/CartContext';
 // Main:
 const Cart = () => {
   let user = false;
-  // Context:
+  //Context:
   const [{ basket }] = useStateValue();
 
+  // Total Price:
+  const newTotal = basket.reduce(
+    (amount, item) => item.price * item.amount + amount,
+    0
+  );
+
   //Empty Cart?:
-  if (basket.length === 0) {
+  if (basket?.length === 0) {
     return <EmptyCart></EmptyCart>;
   }
   return (
@@ -21,10 +27,10 @@ const Cart = () => {
         <div className='section-title'>
           <h2>Your Cart</h2>
         </div>
-        {basket.map((item) => {
-          return <CartItem key={item.page} {...item}></CartItem>;
+        {basket?.map((item) => {
+          return <CartItem key={item.id} {...item}></CartItem>;
         })}
-        <h2 className='cart-page-total'>total: $ {basket.length}</h2>
+        <h2 className='cart-page-total'>total: $ {newTotal}</h2>
         {user ? (
           <Link to='/checkout' className='btn-primary btn-checkout'>
             Checkout

@@ -4,10 +4,10 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useStateValue } from '../Context/CartContext';
 
 // Main:
-const ProductCard = ({ title, imageUrl, price, page }) => {
+const ProductCard = ({ title, imageUrl, price, page, amount, id }) => {
   // Add to cart:
   const [{ basket }, dispatch] = useStateValue();
-  console.log(basket);
+
   const addToBasket = () => {
     dispatch({
       type: 'ADD_BASKET',
@@ -16,6 +16,8 @@ const ProductCard = ({ title, imageUrl, price, page }) => {
         imageUrl,
         price,
         page,
+        amount,
+        id,
       },
     });
   };

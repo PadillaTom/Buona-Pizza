@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 //Pages:
@@ -8,11 +8,43 @@ import Error from './Pages/error';
 import Menu from './Pages/menu';
 import ProductDetails from './Pages/productDetails';
 import Cart from './Pages/cart';
+import Login from './Pages/login';
 // Components
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+// Basket Context For Users:
+import { useStateValue } from './Context/CartContext';
+// Firebase:
+import { auth } from './firebase';
 
 function App() {
+  // Hook for Users Cart:
+  const [{ user }, dispatch] = useStateValue();
+  // Use Effect:
+  useEffect(() => {
+    // This will track whenever user Auth changes
+    const unsuscribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // There is an user Logged in.
+        dispatch({
+          type: 'SET_USER',
+          user: authUser,
+        });
+      } else {
+        //There is NO ONE Logged in.
+        dispatch({
+          type: 'SET_USER',
+          user: null,
+        });
+      }
+    });
+    return () => {
+      //Cleanup:
+      unsuscribe();
+    };
+  }, []);
+
+  // Main:
   return (
     <Router>
       <Header></Header>
@@ -32,6 +64,9 @@ function App() {
         ></Route>
         <Route path='/cart'>
           <Cart></Cart>
+        </Route>
+        <Route path='/login'>
+          <Login></Login>
         </Route>
         <Route path='*'>
           <Error></Error>

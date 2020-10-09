@@ -1,7 +1,7 @@
 // Menu Context:
 // Fetching Firebase Data to be Passed Everywhere within APP
 import React, { useState, useEffect } from 'react';
-import db from '../firebase';
+import { db } from '../firebase';
 // Helpers:
 
 // Context:

@@ -1,8 +1,26 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-const PromoCard = ({ title, imageUrl, price, page }) => {
+import { useStateValue } from '../Context/CartContext';
+
+// Main:
+const PromoCard = ({ id, title, imageUrl, price, page, amount }) => {
+  const [{ basket }, dispatch] = useStateValue();
   const history = useHistory();
+
+  const addToBasket = () => {
+    dispatch({
+      type: 'ADD_BASKET',
+      item: {
+        title,
+        imageUrl,
+        price,
+        page,
+        amount,
+        id,
+      },
+    });
+  };
   // Main:
   return (
     <article className='promo-card'>
@@ -12,6 +30,7 @@ const PromoCard = ({ title, imageUrl, price, page }) => {
         <AiOutlineShoppingCart
           className='promo-cart-icon'
           onClick={() => {
+            addToBasket();
             history.push('/cart');
           }}
         ></AiOutlineShoppingCart>
