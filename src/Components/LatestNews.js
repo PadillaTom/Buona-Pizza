@@ -7,6 +7,7 @@ import { TiArrowBack, TiArrowForward } from 'react-icons/ti';
 
 const LatestNews = () => {
   const { latest } = React.useContext(NewsContext);
+
   return (
     <section className='section latest-section'>
       <div className='latest-news-header'>
@@ -19,7 +20,7 @@ const LatestNews = () => {
 
       {latest.map((item) => {
         return (
-          <LatestCard key={item.id} {...item} id='promo-card'></LatestCard>
+          <LatestCard key={item.id} {...item}></LatestCard>
         );
       })}
     </section>
