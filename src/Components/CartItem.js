@@ -2,13 +2,13 @@ import React from 'react';
 import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
 
 // Main:
-const CartItem = ({ image, title, price, amount }) => {
+const CartItem = ({ imageUrl, title, price, amount }) => {
   //Context:
 
   // Main:
   return (
     <article className='cart-item'>
-      <img src={image} alt={title} className='cart-item-img' />
+      <img src={imageUrl} alt={title} className='cart-item-img' />
       <div className='cart-info-container'>
         <h4>{title}</h4>
         <h5>${price}</h5>
