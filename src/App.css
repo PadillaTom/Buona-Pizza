@@ -633,6 +633,7 @@ a {
 .cart-item {
   border: 1px solid #37353441;
   display: grid;
+  height: 7rem;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.3rem;
   margin-bottom: 0.5rem;
@@ -681,6 +682,7 @@ a {
 }
 .btn-amount {
   margin: 0 auto;
+  font-size: 1.5rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -693,12 +695,13 @@ a {
   transition: var(--MainTransition);
 }
 .btn-amount:hover > * {
-  transform: scale(1.7);
+  transform: scale(1.5);
 }
 .cart-amount {
   font-family: var(--TextsFont);
   color: black;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 /* End Cart Item */
 

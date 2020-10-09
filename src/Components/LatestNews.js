@@ -19,7 +19,7 @@ const LatestNews = () => {
 
       {latest.map((item) => {
         return (
-          <LatestCard key={item.page} {...item} id='promo-card'></LatestCard>
+          <LatestCard key={item.id} {...item} id='promo-card'></LatestCard>
         );
       })}
     </section>
