@@ -764,13 +764,75 @@ a {
   color: var(--MainColor);
   cursor: pointer;
 }
-
-/* End User Interface */
-
 /* End Login Page */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Latest News ::::::::::::::::::::: */
+.latest-news-header {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 0.3rem 0.5rem;
+}
+.latest-news-title {
+  font-size: 1.5rem;
+  color: var(--MainColor);
+  font-family: var(--TitleFont);
+  letter-spacing: 2px;
+}
+.latest-header-arrows > * {
+  font-size: 1.6rem;
+  margin-left: 0.7rem;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.latest-header-arrows > *:hover {
+  color: var(--MainColor);
+}
+/* Latest Card */
+.latest-card {
+  width: 95%;
+  margin: 0 auto;
+
+  margin-bottom: 3rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.083);
+}
+.latest-img {
+  width: 100%;
+}
+.latest-info {
+  padding-bottom: 1.5rem;
+  margin-left: 0.7rem;
+}
+.latest-info p {
+  color: var(--MainColor);
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+.latest-info h4 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+}
+.latest-info h6 {
+  max-width: 90%;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--Gray1Color);
+  letter-spacing: 2px;
+  margin-bottom: 0.2rem;
+}
+.btn-latest {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--MainColor);
+  cursor: pointer;
+  font-size: 0.7rem;
+}
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */

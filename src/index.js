@@ -5,12 +5,15 @@ import App from './App';
 import MenuProvider from './Context/MenuContext';
 import { CartProvider } from './Context/CartContext';
 import reducer, { initialState } from './Context/reducer';
+import NewsProvider from './Context/NewsContext';
 
 ReactDOM.render(
-  <MenuProvider>
-    <CartProvider initialState={initialState} reducer={reducer}>
-      <App />
-    </CartProvider>
-  </MenuProvider>,
+  <NewsProvider>
+    <MenuProvider>
+      <CartProvider initialState={initialState} reducer={reducer}>
+        <App />
+      </CartProvider>
+    </MenuProvider>
+  </NewsProvider>,
   document.getElementById('root')
 );

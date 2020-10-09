@@ -18,7 +18,9 @@ const Navbar = () => {
   const history = useHistory();
   // Logout function:
   const userLogout = () => {
+    let msgOut = `You have Logged Out.`;
     auth.signOut();
+    alert(msgOut);
   };
   // Main:
   return (

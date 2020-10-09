@@ -9,6 +9,7 @@ import Menu from './Pages/menu';
 import ProductDetails from './Pages/productDetails';
 import Cart from './Pages/cart';
 import Login from './Pages/login';
+import Journal from './Pages/newsDetails';
 // Components
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -54,6 +55,9 @@ function App() {
         </Route>
         <Route path='/about'>
           <About></About>
+        </Route>
+        <Route path='/news'>
+          <Journal></Journal>
         </Route>
         <Route path='/menu' exact>
           <Menu></Menu>

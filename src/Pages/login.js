@@ -10,12 +10,14 @@ const Login = () => {
 
   // Functions:
   const loginUser = (e) => {
+    let msgIn = `Logged in as : ${email}`;
     e.preventDefault();
     // Login ----> Setting Email and Pass, Then Authenticate via Firebase.
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         // Logged In: Redirect to Homepage.
+        alert(msgIn);
         history.push('/');
       })
       .catch((e) => alert(e.message));
