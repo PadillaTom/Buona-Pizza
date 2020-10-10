@@ -3,13 +3,11 @@ import {Link} from "react-router-dom"
 
 const LatestCard = ({
   id,
-  featured,
   date,
   imageUrl,
   title,
   info,
-  shortinfo,
-}) => {
+ }) => {
  
   return (
     <article className='latest-card'>
