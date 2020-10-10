@@ -27,6 +27,7 @@ const Cart = () => {
         <div className='section-title'>
           <h2>Your Cart</h2>
         </div>
+        <Link to ="/menu"><p className="return-menu">View Menu</p></Link>
         {basket?.map((item) => {
           return <CartItem key={item.id} {...item}></CartItem>;
         })}

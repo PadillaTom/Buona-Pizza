@@ -13,9 +13,9 @@ const home = () => {
       <Banner></Banner>
       <Services></Services>
       <PromoProducts></PromoProducts>
+      <SliderMain></SliderMain>
       <Discounts></Discounts>
       <LatestNews></LatestNews>
-      <SliderMain></SliderMain>
     </section>
   );
 };

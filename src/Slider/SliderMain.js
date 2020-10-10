@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import {GrPrevious, GrNext} from "react-icons/gr"
+
+import {AiOutlineRight, AiOutlineLeft} from "react-icons/ai"
 import sliderImgs from "./sliderImgs"
 
 // Main.
@@ -46,10 +47,10 @@ return ()=> clearInterval(sliderTimer)
    
 })} 
 <button className="slide-btn prev-slide" onClick={()=>setIndex(index-1)}>
-    <GrPrevious></GrPrevious>
+    <AiOutlineLeft></AiOutlineLeft>
 </button>
 <button className="slide-btn next-slide" onClick={()=>setIndex(index+1)}>
-    <GrNext></GrNext>
+    <AiOutlineRight></AiOutlineRight>
 </button>
 </div>
             
