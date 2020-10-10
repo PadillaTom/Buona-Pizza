@@ -889,11 +889,76 @@ a {
   margin: 1rem auto;
   color: var(--MainColor);
 }
-
 /* End News Details*/
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Gallery Slider ::::::::::::::::::::: */
+.gallery-container {
+  width: 100%;
+  height: 20rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  position: relative;
+  display: flex; /*Aligns one next to the other*/
+  background: var(--MainColor);
+  overflow: hidden;
+}
+.slider-article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--MainTransition);
+  opacity: 0;
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.prev-slide {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.next-slide {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.prev-slide:hover {
+  left: 2%;
+}
+.next-slide:hover {
+  right: 2%;
+}
+/* Dynamic Classes */
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+article.lastSlide {
+  transform: translateX(-100%);
+}
+article.nextSlide {
+  transform: translateX(100%);
+}
+
+/* End Gallery Slider */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
