@@ -966,8 +966,67 @@ article.nextSlide {
 
 /* End Gallery Slider */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Newsletter ::::::::::::::::::::: */
+.newsletter-sect {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://firebasestorage.googleapis.com/v0/b/buona-pizza-b85d5.appspot.com/o/Latest%20News%2Fnewsletter.jpg?alt=media&token=de5b3bee-3f46-43f4-b725-e0ab74982363')
+      center/cover no-repeat;
+  border-bottom: 2px solid #ff2828;
+  border-top: 2px solid #ff2828;
+  height: 15rem;
+}
+.newsletter-container {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.5rem 0rem;
+}
+.newsletter-icon {
+  font-size: 2rem;
+  color: white;
+}
+.newsletter-container h2 {
+  color: white;
+  font-family: var(--TitleFont);
+  letter-spacing: 2px;
+  padding: 0.3rem 0rem;
+}
+.newsletter-container p {
+  color: #ff2828;
+  letter-spacing: 1.3px;
+}
+.newsletter-control {
+  position: relative;
+  padding: 1rem 0rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.newsletter-input {
+  width: 90%;
+  padding: 0.3rem;
+}
+.btn-newsletter {
+  position: absolute;
+  border: none;
+  outline: none;
+  background: transparent;
+  top: 50%;
+  right: -2%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--MainColor);
+  cursor: pointer;
+  transition: var(--MainTransition);
+  padding: 0.2rem;
+}
+.btn-newsletter:hover {
+  color: white;
+  background-color: var(--MainColor);
+}
+/* End Newsletter */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */

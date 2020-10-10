@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Components/Banner';
 import Discounts from '../Components/Discounts';
 import LatestNews from '../Components/LatestNews';
+import Newsletter from '../Components/Newsletter';
 import PromoProducts from '../Components/PromoProducts';
 import Services from '../Components/Services';
 import SliderMain from '../Slider/SliderMain';
@@ -16,6 +17,7 @@ const home = () => {
       <SliderMain></SliderMain>
       <Discounts></Discounts>
       <LatestNews></LatestNews>
+      <Newsletter></Newsletter>
     </section>
   );
 };
