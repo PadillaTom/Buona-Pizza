@@ -5,10 +5,8 @@ import Loading from "../Components/Loading"
 
 const NewsDetails = () => {
   const { id } = useParams();
-
   const { news } = React.useContext(NewsContext);
- 
-  const notice = news.find((notice) => notice.id === id);
+   const notice = news.find((notice) => notice.id === parseInt(id));
   console.log(notice);
 
     if(news.length === 0){
