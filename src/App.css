@@ -359,7 +359,7 @@ a {
   margin-bottom: 3rem;
 }
 .single-discount {
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
   text-align: center;
   height: 15rem;
@@ -795,6 +795,9 @@ a {
   color: var(--MainColor);
 }
 /* Latest Card Container */
+.latest-section {
+  position: relative;
+}
 .latest-card-container {
   height: 32rem;
   width: 95%;
@@ -805,7 +808,6 @@ a {
 /* Latest Card */
 .latest-card {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -819,9 +821,9 @@ a {
 .latest-info {
   width: 95%;
   margin: 0 auto;
-  flex: 1;
-  justify-self: center;
-  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .latest-info p {
   color: var(--MainColor);
@@ -849,6 +851,7 @@ a {
   color: var(--MainColor);
   cursor: pointer;
   font-size: 0.7rem;
+  padding-bottom: 0.5rem;
 }
 
 /* ::::::::::::::::::: News Details ::::::::::::::::::::: */

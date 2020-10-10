@@ -4,6 +4,7 @@ import Discounts from '../Components/Discounts';
 import LatestNews from '../Components/LatestNews';
 import PromoProducts from '../Components/PromoProducts';
 import Services from '../Components/Services';
+import SliderMain from '../Slider/SliderMain';
 
 // Main:
 const home = () => {
@@ -14,6 +15,7 @@ const home = () => {
       <PromoProducts></PromoProducts>
       <Discounts></Discounts>
       <LatestNews></LatestNews>
+      <SliderMain></SliderMain>
     </section>
   );
 };
