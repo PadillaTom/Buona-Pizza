@@ -22,7 +22,7 @@ if (index > lastIndex){
  useEffect(()=>{
 let sliderTimer = setInterval(()=>{
 setIndex(index +1)
-},3500);
+},3600);
 return ()=> clearInterval(sliderTimer)
  },[index])
 
