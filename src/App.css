@@ -52,6 +52,9 @@ a {
   .section-center {
     width: 95%;
   }
+  .section-title {
+    padding-top: 2rem;
+  }
 }
 #root {
   max-width: 100vw;
@@ -96,6 +99,9 @@ a {
 /* End Header */
 
 /* ::::::::::::::::::: Navbar ::::::::::::::::::::: */
+.desktop-nav {
+  display: none;
+}
 .mobile-navbar {
   width: 100%;
   background-color: white;
@@ -201,8 +207,53 @@ a {
   margin-left: 0.5rem;
   font-size: 1rem;
 }
-
 /* End Mobile Navbar */
+
+/* Desktop Nav */
+@media screen and (min-width: 700px) {
+  .mobile-navbar {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+  .desktop-nav {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    height: 4rem;
+  }
+  .desk-logo {
+    color: var(--MainColor);
+    cursor: pointer;
+    text-align: center;
+    font-family: var(--LogoFont);
+    letter-spacing: 2px;
+    margin-left: 1.5rem;
+  }
+  .desk-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 0.6rem;
+  }
+  .desk-link {
+    margin-right: 1rem;
+    font-family: var(--TitleFont);
+    cursor: pointer;
+    transition: var(--MainTransition);
+    font-weight: 500;
+  }
+  .desk-link:hover {
+    color: var(--MainColor);
+  }
+  .mobile-bag:hover {
+    transform: scale(1.05);
+  }
+}
+/* End Desktop Nav */
 
 /* ::::::::::::::::::: Home-Section ::::::::::::::::::::: */
 .home-sect {
@@ -215,7 +266,7 @@ a {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('https://firebasestorage.googleapis.com/v0/b/buona-pizza-b85d5.appspot.com/o/Banner%2Ffizzafour.jpg?alt=media&token=744c91d3-e2a9-4315-b9ce-c3cae1630b5c')
       center/cover fixed no-repeat;
-  width: 100vw;
+  width: 100%;
   height: 65vh;
   position: relative;
 }
@@ -238,10 +289,17 @@ a {
 .btn-banner:hover {
   background: var(--MainColor);
 }
-
+@media screen and (min-width: 700px) {
+  .banner-info {
+    top: 70%;
+  }
+}
 /* End Banner-Section */
 
 /* ::::::::::::::::::: About Page ::::::::::::::::::::: */
+.about-sect {
+  min-height: 70vh;
+}
 .about-info {
   width: 90%;
   margin: 0 auto;
@@ -252,7 +310,18 @@ a {
   margin-bottom: 3rem;
 }
 /* End About Page */
-
+@media screen and (min-width: 700px) {
+  .about-info {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-info {
+    width: 50%;
+    line-height: 1.4;
+    padding-bottom: 2.5rem;
+  }
+}
 /* ::::::::::::::::::: Error Page ::::::::::::::::::::: */
 .error-sect {
   height: 70vh;
@@ -283,7 +352,7 @@ a {
   align-items: center;
   height: 6rem;
   background: #ff2828;
-  width: 100vw;
+  width: 100%;
 }
 .single-service {
   text-align: center;
@@ -309,7 +378,7 @@ a {
 
 /* ::::::::::::::::::: Footer ::::::::::::::::::::: */
 .footer-center {
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   display: grid;
@@ -349,9 +418,21 @@ a {
 }
 /* End Footer */
 
+@media screen and (min-width: 700px) {
+  .footer-light {
+    height: 5rem;
+    font-size: 1.3rem;
+  }
+  .light-right {
+    font-size: 2rem;
+  }
+  .footer-dark {
+    font-size: 1.2rem;
+  }
+}
 /* ::::::::::::::::::: Discounts ::::::::::::::::::::: */
 .discounts {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -473,7 +554,22 @@ a {
   color: white;
 }
 /* End Product Card */
-
+@media screen and (min-width: 700px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .products-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 /* ::::::::::::::::::: Promo Products ::::::::::::::::::::: */
 .promo-title {
   text-align: center;
@@ -496,12 +592,14 @@ a {
   text-align: center;
   background-color: white;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.248);
+  display: flex;
+  flex-direction: column;
 }
 .promo-img-container {
   position: relative;
   width: 100%;
-  height: 8rem;
-  flex: 0;
+  height: 8.2rem;
+  flex: 1;
 }
 .promo-card-overlay {
   position: absolute;
@@ -532,7 +630,7 @@ a {
 }
 .promo-info {
   text-align: start;
-  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .promo-pizza-title {
   font-size: 0.8rem;
@@ -544,7 +642,36 @@ a {
   font-weight: bold;
   font-family: var(--TitleFont);
 }
-
+@media screen and (min-width: 700px) {
+  .promo-title {
+    font-size: 2.3rem;
+  }
+  .promo-container {
+    gap: 1.2rem;
+  }
+  .promo-card {
+    height: 15rem;
+  }
+  .promo-img-container {
+    height: 10rem;
+  }
+  .promo-cart-icon {
+    font-size: 1.5rem;
+    top: 0.6rem;
+    right: 1rem;
+  }
+  .promo-cart-icon:hover {
+    transform: scale(1.2);
+  }
+}
+@media screen and (min-width: 992px) {
+  .promo-card {
+    height: 18rem;
+  }
+  .promo-container {
+    gap: 1.5rem;
+  }
+}
 /* End Promo Products */
 
 /* ::::::::::::::::::: Product Details ::::::::::::::::::::: */
@@ -588,10 +715,11 @@ a {
 /* ::::::::::::::::::: Empty Cart ::::::::::::::::::::: */
 .empty-sect {
   min-height: 76vh;
+  display: flex;
+  align-items: center;
 }
 .empty-container {
   text-align: center;
-  padding-top: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -604,6 +732,7 @@ a {
   background: var(--MainColor);
   color: white;
 }
+
 /* End Empty Cart */
 
 /* ::::::::::::::::::: Cart Page ::::::::::::::::::::: */
@@ -636,6 +765,8 @@ a {
 
 /* ::::::::::::::::::: Cart Item Component ::::::::::::::::::::: */
 .cart-item {
+  width: 95%;
+  margin: 0 auto;
   border: 1px solid #37353441;
   display: grid;
   height: 7rem;
@@ -651,6 +782,7 @@ a {
 }
 .cart-info-container {
   align-self: center;
+  justify-self: center;
   text-align: center;
   margin: 0.5rem auto;
 }
@@ -681,6 +813,8 @@ a {
 }
 .cart-amount-container {
   align-self: center;
+  justify-self: center;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -709,18 +843,29 @@ a {
   font-size: 1.3rem;
 }
 /* End Cart Item */
-
+@media screen and (min-width: 900px) {
+  .cart-item {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cart-item {
+    max-width: 80%;
+  }
+}
 /* ::::::::::::::::::: Login Page ::::::::::::::::::::: */
 .form-section {
   height: 73vh;
-  max-width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .login-form {
   width: 90%;
   border: 1px solid rgba(0, 0, 0, 0.364);
-  margin: 0 auto;
-  margin-top: 3rem;
   text-align: center;
+  margin: 2rem auto;
 }
 .form-control {
   width: 70%;
@@ -772,6 +917,24 @@ a {
   color: var(--MainColor);
   cursor: pointer;
 }
+@media screen and (min-width: 800px) {
+  .login-form {
+    width: 80%;
+    margin-bottom: 4rem;
+  }
+  .form-control {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .login-form {
+    width: 50%;
+    margin-bottom: 5rem;
+  }
+  .form-control {
+    width: 90%;
+  }
+}
 /* End Login Page */
 
 /* ::::::::::::::::::: Latest News ::::::::::::::::::::: */
@@ -789,15 +952,6 @@ a {
   color: var(--MainColor);
   font-family: var(--TitleFont);
   letter-spacing: 2px;
-}
-.latest-header-arrows > * {
-  font-size: 1.6rem;
-  margin-left: 0.7rem;
-  cursor: pointer;
-  transition: var(--MainTransition);
-}
-.latest-header-arrows > *:hover {
-  color: var(--MainColor);
 }
 /* Latest Card Container */
 .latest-section {
@@ -826,6 +980,7 @@ a {
 .latest-info {
   width: 95%;
   margin: 0 auto;
+  flex: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -857,6 +1012,24 @@ a {
   cursor: pointer;
   font-size: 0.7rem;
   padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 700px) {
+  .latest-news-header {
+    width: 100%;
+  }
+  .latest-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .latest-card {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    height: 33rem;
+  }
+  .latest-img {
+    height: 22rem;
+  }
 }
 
 /* ::::::::::::::::::: News Details ::::::::::::::::::::: */
@@ -963,7 +1136,12 @@ article.lastSlide {
 article.nextSlide {
   transform: translateX(100%);
 }
-
+/* End Dynamic Classes */
+@media screen and (min-width: 700px) {
+  .gallery-container {
+    height: 30rem;
+  }
+}
 /* End Gallery Slider */
 
 /* ::::::::::::::::::: Newsletter ::::::::::::::::::::: */
@@ -1012,7 +1190,7 @@ article.nextSlide {
   outline: none;
   background: transparent;
   top: 50%;
-  right: -2%;
+  right: ;
   transform: translate(-50%, -50%);
   font-size: 1.2rem;
   letter-spacing: 1.4px;
@@ -1022,12 +1200,19 @@ article.nextSlide {
   transition: var(--MainTransition);
   padding: 0.2rem;
 }
-.btn-newsletter:hover {
-  color: white;
-  background-color: var(--MainColor);
-}
-/* End Newsletter */
 
+/* End Newsletter */
+@media screen and (min-width: 700px) {
+  .newsletter-container {
+    width: 70%;
+  }
+  .newsletter-input {
+    width: 70%;
+  }
+  .btn-newsletter {
+    right: 12%;
+  }
+}
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
 

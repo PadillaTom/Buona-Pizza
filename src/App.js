@@ -13,6 +13,7 @@ import NewsDetails from './Pages/newsDetails';
 // Components
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import Navbar from "./Components/Navbar"
 // Basket Context For Users:
 import { useStateValue } from './Context/CartContext';
 // Firebase:
@@ -49,6 +50,7 @@ function App() {
   return (
     <Router>
       <Header></Header>
+      <Navbar></Navbar>
       <Switch>
         <Route path='/' exact>
           <Home></Home>

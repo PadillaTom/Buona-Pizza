@@ -90,6 +90,53 @@ const Navbar = () => {
         </ul>
       </div>
       {/* End Mobile */}
+      {/* Desktop */}
+      <div className="desktop-nav">
+        <div className="desk-logo">
+          <Link to='/'>
+            <h1> Buona Pizza !</h1>
+          </Link>
+        </div>
+        
+          <ul className="desk-links">
+            <li className="desk-link">
+               <Link to='/about'>
+              About
+            </Link>
+            </li>
+                 <li className="desk-link">
+            <Link to='/menu' >
+              Menu
+            </Link>
+          </li>
+          <li className="desk-link">
+            <Link to='/contact' >
+              Contact
+            </Link>
+          </li>
+            {!user ? (
+            <li className="desk-link">
+              <Link to='/login'>
+                Login
+              </Link>
+            </li>
+          ) : (
+            <li>
+              <Link to='/' className="desk-link" onClick={userLogout}>
+                Logout
+              </Link>
+            </li>)}
+               <li className='mobile-bag'>
+          <BsBagFill
+            onClick={() => {
+              history.push('/cart');
+            }}
+          ></BsBagFill>
+          <p className='nav-amount-number'>{basket?.length}</p>
+        </li>
+          </ul>
+       
+      </div>
     </React.Fragment>
   );
 };

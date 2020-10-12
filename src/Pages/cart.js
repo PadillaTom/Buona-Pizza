@@ -2,13 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import EmptyCart from '../Components/EmptyCart';
 import CartItem from '../Components/CartItem';
+import firebase from "firebase"
+
+
 // Context:
 import { useStateValue } from '../Context/CartContext';
 
 // Main:
 const Cart = () => {
-  let user = false;
-  //Context:
+
+  let user = firebase.auth().currentUser
+  
+    //Context:
   const [{ basket }] = useStateValue();
 
   // Total Price:

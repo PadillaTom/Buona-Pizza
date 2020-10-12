@@ -13,9 +13,9 @@ const LatestNews = () => {
     <section className='section latest-section'>
       <div className='latest-news-header'>
         <h2 className='latest-news-title'>Latest News</h2>
-      
+     
       </div>
-
+<div className="latest-cards-container">
       {latest.map((item) => {
         return (
           <div className="latest-card-container" key={item.id}>
@@ -23,6 +23,7 @@ const LatestNews = () => {
           </div>
         );
       })}
+      </div>
     </section>
   );
 };

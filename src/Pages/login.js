@@ -19,6 +19,7 @@ const Login = () => {
         // Logged In: Redirect to Homepage.
         alert(msgIn);
         history.push('/');
+        console.log(auth);
       })
       .catch((e) => alert(e.message));
   };
@@ -71,7 +72,8 @@ const Login = () => {
             Submit
           </button>
           <p className='register-text'>
-            To Register: Please fill the form then
+            To Register: Please fill the form then...
+            <br/>
             <button
               type='button'
               className='btn-register'

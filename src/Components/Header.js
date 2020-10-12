@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+
 
 const Header = () => {
   return (
@@ -10,8 +10,7 @@ const Header = () => {
           <h1> Buona Pizza !</h1>
         </Link>
       </div>
-      <Navbar></Navbar>
-    </header>
+       </header>
   );
 };
 
